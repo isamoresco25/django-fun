@@ -5,7 +5,7 @@ import pokebase as pb
 
 # Make a request to api and take some fields to our view
 def simple(request):
-    response = requests.get('https://pokeapi.co/api/v2/pokemon/1')
+    response = requests.get('https://pokeapi.co/api/v2/pokemon/19')
     pokemon = response.json()
     return render(request, 'pokemaoc/simple.html', {
         'nome': pokemon['name'],
