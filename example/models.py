@@ -43,7 +43,7 @@ class Article(models.Model):
     headline = models.CharField(max_length=100)
     pub_date = models.DateField()
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
-    publications = models.ManyToManyField(Publication)
+    publications = models.(Publication)
 
     class Meta:
         ordering = ['headline']
@@ -51,3 +51,4 @@ class Article(models.Model):
     def __str__(self):
         return self.headline
 
+#5 reporters, 10 publicacoes, 5 arti
